@@ -5,6 +5,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+# Credentials
+gcloud_auth.json
+
+# Output files
+*.mp3
+
 # Runtime data
 pids
 *.pid
