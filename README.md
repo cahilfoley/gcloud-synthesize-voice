@@ -2,6 +2,10 @@
 
 This is a script to allow quick voice file synthesis via the Google Cloud voice API.
 
+```sh
+node synthesize text "Hello Google Cloud voice API!"
+```
+
 To use the script you will need to:
 
 1.  [Setup the project](#Setup) (first time only)
@@ -9,7 +13,14 @@ To use the script you will need to:
 
 ## Setup
 
-To use the script first install the npm dependencies by running
+To use the script first clone the repository
+
+```sh
+git clone https://github.com/cahilfoley/gcloud-synthesize-voice.git
+cd gcloud-synthesize-voice
+```
+
+Then install the npm dependencies by running
 
 ```sh
 npm install
@@ -24,7 +35,7 @@ Next make sure that you [enable the text-to-speech API for your project](https:/
 The script accepts 4 different types of inputs, all commands roughly follow the format
 
 ```sh
-node synthesize <command> [--outputFile <path>|--help|--version]
+node synthesize <command> [--outputFile <path>]
 ```
 
 ### Text input
@@ -64,3 +75,11 @@ To synthesize an SSML file use the `ssml-file` command
 ```sh
 node synthesize ssml-file resources/demo.ssml -o output.mp3
 ```
+
+### CLI flags
+
+| Flag               | Type   | Description                                                         |
+| ------------------ | ------ | ------------------------------------------------------------------- |
+| `--version`        | N/A    | Show script version number                                          |
+| `--outputFile, -o` | string | The output file name that will be generated (default: "output.mp3") |
+| `--help`           | N/A    | Show help                                                           |
