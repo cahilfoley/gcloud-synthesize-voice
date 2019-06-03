@@ -32,6 +32,20 @@ Next make sure that you [enable the text-to-speech API for your project](https:/
 
 ## Run
 
+### Before running
+
+Before running any command, set the `GOOGLE_APPLICATION_CREDENTIALS` environment variable to the path of your `gcloud_auth.json` file that was created in the setup.
+
+**Example (windows)**
+```dos
+set GOOGLE_APPLICATION_CREDENTIALS=%cd%\gcloud_auth.json
+```
+
+**Example (Linux Bash)**
+```sh
+GOOGLE_APPLICATION_CREDENTIALS=$(pwd)/gcloud_auth.json
+```
+
 The script accepts 4 different types of inputs, all commands roughly follow the format
 
 ```sh
